@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/logo.png" type="image/icon type">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-toggle"></div>
+            <img class="navbar-logo" src="../img/logo.png" alt="logo">
+
+            <ul class="navbar-group">
+                <a href="/">
+                    <li class="navbar-item">Home</li>
+                </a>
+                <a href="/assets/menu/services.html">
+                    <li class="navbar-item">Services</li>
+                </a>
+                <a href="../menu/experience.html">
+                    <li class="navbar-item">Experience</li>
+                </a>
+                <li class="navbar-item">
+                    Hire Me
+                    <ul class="navbar-down">
+                        <a href="/assets/menu/contact.html">
+                            <li class="navbar-item">Contact</li>
+                        </a>
+                        <a href="">
+                            <li class="navbar-item">CV</li>
+                        </a>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="username">
+                <button type="button">Novan Ramadani
+                    <!-- <ul>
+                    </ul><li>Contact</li>
+                    <li>Contact</li> -->
+                        
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="services" class="services">
+            <h2 class="services-title">My Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <img src="../img/logo.png" alt="Web Design" class="service-img">
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint alias tenetur adipisci laudantium repudiandae reiciendis ut voluptatibus sapiente assumenda esse!</p>
+                </div>
+                <div class="service-card">
+                    <img src="../img/logo.png" alt="Web Development" class="service-img">
+                    <h3>Web Development</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, minima non. Reprehenderit iste odit dolores.</p>
+                </div>
+                <div class="service-card">
+                    <img src="../img/logo.png" alt="SEO Optimization" class="service-img">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam non odio obcaecati repudiandae iste ullam blanditiis assumenda.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <ul class="footer-list">
+              <li class="list"><a href="https://instagram.com/gomennnee">Instagram</a></li>
+              <li class="list"><a href="mailto:nouuuvv@gmail.com">Email</a></li>
+              <!-- <li class="list"><a href="https://dribbble.com/julesforrest">Dribbble</a></li> -->
+              <li class="list"><a href="https://github.com/nouuuvv">Github</a></li>
+              <li class="list">
+                <p>👋</p>
+              </li>
+            </ul>
+          </div>
+    </footer>
+
+    <script>
+        const navItem = document.querySelectorAll(".navbar-group > .navbar-item");
+
+        navItem.forEach((nav) => {
+            const navDown = nav.querySelector(".navbar-down");
+            if (navDown) {
+                nav.addEventListener("mouseenter", () => {
+                    navDown.classList.add("navbar-expand");
+                });
+                nav.addEventListener("mouseleave", () => {
+                    navDown.classList.remove("navbar-expand");
+                });
+            }
+        });
+
+        const menuToggle = document.querySelector(".navbar-toggle");
+
+        menuToggle.addEventListener("click", (e) => {
+            document.querySelector(".navbar-group").classList.toggle("navbar-expand");
+            document.querySelector(".username").classList.toggle("navbar-expand");
+
+            e.target.classList.toggle("navbar-expand");
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* Start About Style */
+.about {
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 0;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.about img {
+    border: 4px solid blueviolet;
+    box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
+    height: auto;
+    width: 40%;
+    max-width: 300px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px blueviolet, 0 0 35px blueviolet;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h1 {
+    color: white;
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: rgba(255, 236, 236, 0.8);
+    letter-spacing: 1px;
+    line-height: 1.8em;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about-text .highlight {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.about-text button {
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    border: 1px solid black;
+    background-color: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 black;
+}
+
+.about-text button:hover {
+    background: white;
+    color: blueviolet;
+    box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
+    transform: scale(1.05);
+}
+
+.skills {
+    padding: 50px 0;
+    background-color: #191919;
+    color: white;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #191919;
+    text-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    max-width: 120px;
+}
+
+.skill img {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.skill img:hover {
+    transform: scale(1.1);
+}
+
+.skill p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .about img {
+        width: 70%;
+    }
+
+    .about-text h1 {
+        font-size: 40px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .skills h2 {
+        font-size: 28px;
+    }
+
+    .skills-icons {
+        gap: 15px;
+    }
+
+    .skill img {
+        max-width: 80px;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .main {
+        flex-direction: column; /* Tampilan vertikal untuk layar kecil */
+        gap: 40px; /* Jarak antar elemen diperbesar */
+    }
+
+    .about img {
+        width: 50%; /* Pastikan gambar tetap terlihat proporsional */
+    }
+
+    .about-text h1 {
+        font-size: 50px;
+    }
+
+    .about-text h5 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about img {
+        width: 70%; /* Atur ulang ukuran gambar untuk perangkat kecil */
+    }
+
+    .about-text h1 {
+        font-size: 40px;
+    }
+
+    .about-text h5 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+}
